@@ -1,20 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text, Image, ScrollView } from 'react-native';
+import Targeta from "./Targeta";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={{backgroundColor: 'yellow', flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <ScrollView>
+      <Targeta></Targeta>
+      <Targeta></Targeta>
+      <Targeta></Targeta>
+      <Targeta></Targeta>
+      <Text style={{color: 'black'}}> hola mundo</Text>
+      <Image source={require('./assets/imagenes/gatitos.jpg')} style = {{width: 400, height:300}}></Image>
+      <Image source={require('./assets/imagenes/gatitos.jpg')} style = {{width: 400, height:300}}></Image>
+      <Image source={require('./assets/imagenes/gatitos.jpg')} style = {{width: 400, height:300}}></Image>
+      </ScrollView>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
